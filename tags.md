@@ -5,6 +5,7 @@
 - #MBRL Model-Based Reinforcement Learning
 - #MoE Mixture of Experts
 - #RL Reinforcement Learning
+- #SPR Self-Predictive Representations
 - #STS-unit Stochastic Times Smooth unit
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
