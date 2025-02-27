@@ -1,4 +1,5 @@
 # Glossary
+- #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
@@ -8,6 +9,7 @@
 - #SF Score Function (estimator)
 - #SPR Self-Predictive Representations
 - #STS-unit Stochastic Times Smooth unit
+- #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
 # Tag Counts
