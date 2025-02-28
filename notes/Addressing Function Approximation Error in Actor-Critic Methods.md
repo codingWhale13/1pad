@@ -18,7 +18,7 @@
 		- clipped double Q-learning finally solves overestimation (unlike all above)
 			- $y_1=r+\gamma \min_{i=1,2}Q_{\theta_i'}(s',\pi_{\phi_1}(s'))$
 			- proposed in this paper
-- introduced method: *Twin Delayed Deep Deterministic policy gradient algorithm* (TD3)
+- introduced method: *TD3* (Twin Delayed Deep Deterministic policy gradient algorithm)
 	- TD3 is an extension of DDPG
 	- key components of TD3
 		- novel variant of Double Q-learning

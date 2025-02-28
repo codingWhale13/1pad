@@ -9,7 +9,7 @@
 		- anything that samples during training (e.g. in some RL methods)
 	- the famous reparameterization trick got us covered
 	- but what if some parts of our model are not just stochastic but also defined by a *discrete* distribution? Now there's a problem: picking a category in the forward pass prevents us from flowing the gradient through this stochastic node during backprop
-- introduced method: *reparameterizable Gumbel-Softmax distribution* (Gumbel-Softmax)
+- introduced method: *Gumbel-Softmax* (reparameterizable Gumbel-Softmax distribution)
 	- why is it cool? sampling mechanism for categorical variables that can be integrated into neural networks and trained using standard backpropagation
 	- how? the Gumbel-Softmax estimator uses a reparameterizable continuous distribution over the simplex that can approximate samples from a categorical distribution
 		- this is quite similar to the reparameterization trick for stochasticity, except
