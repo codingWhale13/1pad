@@ -5,6 +5,8 @@
 	- idea: use temporal consistency loss combined with data augmentations to increase performance, even with relatively few interactions with the environment
 	- SPR extends a strong model-free agent by adding a dynamics model which predicts future latent representations provided by a parameter-wise exponential moving average of the agent itself
 	- projection heads are used to project online (1 head) and target (another head) representations to a smaller latent space
+- related work: Rainbow
+	- SPR augments a sample-efficient variant of Rainbow with a model-based latent dynamics prediction objective
 - crucial components of the method
 	- target encoder is important (much better than using online encoder for target calculation)
 	- dynamics modeling: increasing prediction depth K leads to better performance

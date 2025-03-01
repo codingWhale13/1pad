@@ -6,8 +6,11 @@
 - #MBRL Model-Based Reinforcement Learning
 - #MoE Mixture of Experts
 - #RL Reinforcement Learning
+- #SAC Soft Actor-Critic
 - #SF Score Function (estimator)
-- #SPR Self-Predictive Representations
+- #SPR Self-Predictive Representations (algorithm)
+- #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
+- #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
 - #STS-unit Stochastic Times Smooth unit
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
