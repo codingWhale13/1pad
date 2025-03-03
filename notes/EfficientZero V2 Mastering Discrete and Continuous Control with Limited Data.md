@@ -1,4 +1,4 @@
-#RL  #MBRL #EfficientZeroV2 #TDMPC2 #DreamerV3 #Gumbel-search
+#RL  #MBRL #EfficientZero #TDMPC2 #DreamerV3 #Gumbel-search
 
 - introduced method: *EfficientZero V2* (or *EZ-V2*)
 	- general framework for sample-efficient RL algorithms

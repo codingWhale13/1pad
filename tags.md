@@ -1,4 +1,5 @@
 # Glossary
+- #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
