@@ -8,6 +8,7 @@
 - #MBRL Model-Based Reinforcement Learning
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
+- #POMDP Partially Observable Markov Decision Process
 - #RL Reinforcement Learning
 - #SAC Soft Actor-Critic
 - #SC-MDP Stiefel Contextual Markov Decision Process
