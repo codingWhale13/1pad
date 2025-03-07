@@ -11,6 +11,7 @@
 - #POMDP Partially Observable Markov Decision Process
 - #RL Reinforcement Learning
 - #SAC Soft Actor-Critic
+- #SAL Shared domain-Agnostic Latent space (algorithm)
 - #SC-MDP Stiefel Contextual Markov Decision Process
 - #SF Score Function (estimator)
 - #SPR Self-Predictive Representations (algorithm)
