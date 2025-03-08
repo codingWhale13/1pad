@@ -19,6 +19,7 @@
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
 - #STS-unit Stochastic Times Smooth unit
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
+- #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
