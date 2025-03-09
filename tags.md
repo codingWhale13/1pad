@@ -1,6 +1,7 @@
 # Glossary
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
+- #CReLU Concatenated Rectified Linear Unit
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
 - #LLM Large-Language Model
@@ -9,7 +10,9 @@
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
 - #POMDP Partially Observable Markov Decision Process
+- #ReLU Rectified Linear Unit
 - #RL Reinforcement Learning
+- #S-ALE Switching Arcade Learning Environment (experiment setup)
 - #SAC Soft Actor-Critic
 - #SAL Shared domain-Agnostic Latent space (algorithm)
 - #SC-MDP Stiefel Contextual Markov Decision Process
