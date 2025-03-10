@@ -2,8 +2,11 @@
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
 - #CReLU Concatenated Rectified Linear Unit
+- #DBN Deep Belief Network
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
+- #EI Expected Improvement (optimization criterion)
+- #GP Gaussian Process
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
 - #MBRL Model-Based Reinforcement Learning
@@ -17,6 +20,7 @@
 - #SAL Shared domain-Agnostic Latent space (algorithm)
 - #SC-MDP Stiefel Contextual Markov Decision Process
 - #SF Score Function (estimator)
+- #SMBO Sequential Model-Based global Optimization (algorithm)
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
@@ -24,6 +28,7 @@
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
+- #TPE Tree-structured Parzen Estimator
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
 # Tag Counts
