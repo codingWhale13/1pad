@@ -7,6 +7,8 @@
 - #DL Deep Learning
 - #EI Expected Improvement (optimization criterion)
 - #GP Gaussian Process
+- #HL Histogram Loss
+- #KL-divergence Kullback–Leibler divergence
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
 - #MBRL Model-Based Reinforcement Learning
