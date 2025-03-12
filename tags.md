@@ -2,6 +2,7 @@
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
 - #CReLU Concatenated Rectified Linear Unit
+- #CTPG Cross-Task Policy Guidance (MTRL framework)
 - #DBN Deep Belief Network
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
