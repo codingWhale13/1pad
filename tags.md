@@ -1,4 +1,6 @@
 # Glossary
+- #API Approximate Policy-Iteration
+- #AVI Approximate Value-Iteration
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
 - #CReLU Concatenated Rectified Linear Unit
@@ -6,7 +8,9 @@
 - #DBN Deep Belief Network
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
+- #DQN Deep Q-Learning
 - #EI Expected Improvement (optimization criterion)
+- #FQI Fitted Q-Iteration (algorithm)
 - #GP Gaussian Process
 - #HL Histogram Loss
 - #KL-divergence Kullback–Leibler divergence
