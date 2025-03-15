@@ -13,6 +13,7 @@
 - #FQI Fitted Q-Iteration (algorithm)
 - #GP Gaussian Process
 - #HL Histogram Loss
+- #HO2 Hindsight Off-policy Options
 - #KL-divergence Kullback–Leibler divergence
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
