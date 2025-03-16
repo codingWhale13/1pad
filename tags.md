@@ -29,6 +29,7 @@
 - #SC-MDP Stiefel Contextual Markov Decision Process
 - #SF Score Function (estimator)
 - #SMBO Sequential Model-Based global Optimization (algorithm)
+- #SMDP Semi-Markov Decision Process
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)

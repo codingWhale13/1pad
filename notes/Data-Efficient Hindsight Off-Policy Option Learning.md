@@ -1,4 +1,4 @@
-#RL #ML-estimation #option-model #HO2
+#RL #ML-estimation #option-learning #HO2
 
 ![[Pasted image 20250315233611.png]]
 - background: option learning
@@ -9,7 +9,7 @@
 		- termination condition $b_t\in\beta(s_t,o_t)$ is Bernoulli, describing the option's probability to terminate in any given state
 		- $\pi^L(a_t\mid s_t,o_t)$describes action distribution for a given option
 - introduced method *HO2* (Hindsight Off-policy Options)
-	- leans option policies in an off-policy manner
+	- learns option policies in an off-policy manner
 	- policy improvement algorithm is based on (weighted) maximum likelihood estimation and goes like this
 		1. update critic
 		2. generated intermediate, non-parametric policy based on critic
