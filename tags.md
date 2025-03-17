@@ -17,6 +17,7 @@
 - #KL-divergence Kullback–Leibler divergence
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
+- #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
