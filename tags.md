@@ -15,10 +15,12 @@
 - #HL Histogram Loss
 - #HO2 Hindsight Off-policy Options
 - #KL-divergence Kullback–Leibler divergence
+- #LASSO Least Absolute Shrinkage and Selection Operator (l1 norm)
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
+- #MTL Multi-Task Learning
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
 - #POMDP Partially Observable Markov Decision Process

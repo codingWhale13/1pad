@@ -1,0 +1,69 @@
+#MTL  #DL #LASSO
+
+- motivation for MTL (multi-task learning)
+	- instead of tweaking hyperparameters for every new single task, using training signals of related task is a promising way to increase performance (and maybe even training time)
+	- Caruana 1998: "MTL improves generalization by leveraging the domain-specific information contained in the training signals of related tasks"
+	- more meaningful inductive bias
+		- instead of choosing e.g. $\ell1$ regularization (preferring sparse solutions)
+		- MTL introduces an inductive bias in the form of auxiliary tasks
+- flavors of MTL
+	- joint learning
+		- we want to learning all tasks at once
+	- continuous learning ("learning to learn")
+		- we want to start learning a task and then adapt to new tasks
+	- learning with auxiliary tasks
+		- we only really care about learning a single task, but we want to use MTL to improve the performance of that one task
+		- considerations when picking auxiliary task(s)
+			- related task, e.g. predicting class and coordinates of an object in an image
+			- adversarial task, when labeled data of the opposite goal is easier to get
+				- adversarial loss -> maximize training error
+			- hints: predicting features
+			- focusing attention: force model to learn X by predicting X as auxiliary task
+			- quantization smoothing: instead of human-desired output such as low/medium/high, learn smoother divisions
+			- predicting inputs: some feature might be unhelpful as inputs, but they could be helpful as outputs to predict
+			- using the future to predict the present
+				- e.g. more accurate measurements of line markings in autonomous driving
+				- while original task of course doesn't have access to the future, the auxiliary task is free to learn this back-in-time relation
+			- representation learning, e.g. auto encoder
+		- caveat: there's currently no good notion of when two two tasks are similar or related (and if so, how, e.g. hierarchically)
+- domains
+	- NLP
+	- speech recognition
+	- computer vision
+- two most common methods in deep MTL
+	- hard parameter sharing
+		- sharing hidden layers between all tasks + keeping output-layers task-specific
+		- most common approach (going back to Caruana 1993)
+		- reduces risk of overfitting by factor of N (N = number of tasks)
+	- soft-parameter sharing
+		- each task has its own (same-architecture) model with its own parameters
+		- distance between parameters of the model is regularized, e.g. with $\ell 2$
+- why it works
+	- implicit data augmentation by increasing the effective sample size
+	- attention focusing: fight noise by providing additional evidence on feature relevance
+	- eavesdropping: some features might be easier to learn in auxiliary task; learn from it
+	- representation bias: model prefers representation that models for other tasks found
+	- regularization by introducing an inductive bias
+- literature
+	- classical methods (linear models, kernel methods, Bayesian algorithms) focus on two main ideas
+		- enforcing sparsity across tasks through norm regularization
+			- use block-sparse regularization to share only the most relevant features of the task parameter matrix
+			- while focusing on most important features, they are shared across all tasks
+		- modelling relationships between tasks
+			- maybe we don't want to share information between all tasks, but just a few instead -> need to know how tasks are related
+			- one idea: impose clustering constraint by penalizing both the norms of task column vectors as well as their variance
+			- other idea: cluster regularization (mean, between, within)
+	- neural models
+		- deep relationship networks (predefined structure for sharing)
+		- fully-adaptive feature sharing (learned structure for sharing)
+		- cross-stitch networks (soft sharing approach)
+		- low supervision (using task-hierarchies)
+		- joint many-task model (predefined structure, hierarchical)
+		- weighting loss with uncertainty (Gaussian likelihood with per-task uncertainty)
+		- Tensor factorization for MTL
+		- sluice networks (proposed by author, combines many of the above)
+
+🗓️ 2017
+
+✍️
+- [[Sebastian Ruder]]
