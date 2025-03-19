@@ -23,6 +23,7 @@
 - #MTL Multi-Task Learning
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
+- #PER Prioritized Experience Replay (type of replay buffer)
 - #POMDP Partially Observable Markov Decision Process
 - #ReLU Rectified Linear Unit
 - #RL Reinforcement Learning
@@ -36,6 +37,7 @@
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
+- #STARS Share-unique features and task-aware Prioritized Sampling (algorithm)
 - #STS-unit Stochastic Times Smooth unit
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
