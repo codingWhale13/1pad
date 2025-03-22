@@ -8,8 +8,10 @@
 - #DBN Deep Belief Network
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
+- #DMC-suite DeepMind Control Suite (benchmark)
 - #DQN Deep Q-Learning
 - #EI Expected Improvement (optimization criterion)
+- #EMA Exponential Moving Average (filter, can be used as target)
 - #FQI Fitted Q-Iteration (algorithm)
 - #GP Gaussian Process
 - #HL Histogram Loss
