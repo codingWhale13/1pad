@@ -1,15 +1,17 @@
 # Glossary
+- #ALE Arcade Learning Environment (benchmark)
 - #API Approximate Policy-Iteration
 - #AVI Approximate Value-Iteration
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
 - #CReLU Concatenated Rectified Linear Unit
+- #CNN Convolutional Neural Network
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
 - #DBN Deep Belief Network
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
 - #DMC-suite DeepMind Control Suite (benchmark)
-- #DQN Deep Q-Learning
+- #DQN Deep Q-Network (algorithm)
 - #EI Expected Improvement (optimization criterion)
 - #EMA Exponential Moving Average (filter, can be used as target)
 - #FQI Fitted Q-Iteration (algorithm)
