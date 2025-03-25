@@ -4,6 +4,7 @@
 - #AVI Approximate Value-Iteration
 - #BBF Bigger, Better, Faster (algorithm)
 - #BC-MDP Block Contextual Markov Decision Process
+- #C51 Categorical 51-atom (algorithm)
 - #CReLU Concatenated Rectified Linear Unit
 - #CNN Convolutional Neural Network
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
