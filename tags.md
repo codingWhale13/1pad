@@ -1,5 +1,6 @@
 # Glossary
 - #ALE Arcade Learning Environment (benchmark)
+- #AGC Adaptive Gradient Clipping (optimizer)
 - #API Approximate Policy-Iteration
 - #AVI Approximate Value-Iteration
 - #BBF Bigger, Better, Faster (algorithm)
@@ -32,6 +33,7 @@
 - #POMDP Partially Observable Markov Decision Process
 - #ReLU Rectified Linear Unit
 - #RL Reinforcement Learning
+- #RSSM Recurrent State Space Model
 - #S-ALE Switching Arcade Learning Environment (experiment setup)
 - #SAC Soft Actor-Critic
 - #SAL Shared domain-Agnostic Latent space (algorithm)

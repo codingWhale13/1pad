@@ -1,0 +1,143 @@
+#RL #MBRL  #DreamerV3 #DMC-suite #atari-100k #ProcGen #DMLab #minecraft #RSSM #SAC #EMA #PPO #C51 #symlog #free-bits #stop-gradient #AGC
+
+![[Pasted image 20250328125433.png]]
+- motivation
+	- world models are promising for sample-efficient and robust learning, but they are usually hard to get right and need finetuning and human expertise
+		- one problem is different signal magnitudes that are hard to balance
+	- goal of this paper (and the previous Dreamer generations leading up to it) is to have one algorithm that can learn across diverse domains, with a single set of hyperparameters
+- introduced method: *Dreamer v3*
+	- extends Dreamer v2, with the actor again borrowing entropy regularization from SAC
+	- uses AGC (Adaptive Gradient Clipping) optimizer instead of Adam
+	- 3 components, trained concurrently
+		- world model
+			- equips agent with rich perception, gives ability to imagine the future
+			- sensory input -> outcomes of potential actions
+				- input can be state-based or pixel-based
+				- predicts future representations and rewards
+			- uses autoencoding
+			- representations are sampled from a vector of softmax distributions
+			- uses recurrent state $h_t$ in all world model components
+			- world model components (first 3 are RSSM - recurrent state-space model):
+				- encoder: $z_t\sim q_\phi(z_t\mid h_t,x_t)$
+				- sequence model: $h_t=f_\phi (h_{t-1},z_{t-1},a_{t-1})$
+				- dynamics predictor: $\hat z_t\sim p_\phi(\hat z_t\mid h_t)$
+				- reward predictor: $\hat r_t\sim p_\phi(\hat r_t\mid h_t,z_t)$, zero-initialized
+				- continuation flag predictor: $\hat c_t\sim p_\phi(\hat c_t\mid h_t,z_t)$
+				- decoder: $\hat x_t\sim p_\phi(\hat x_t\mid h_t,z_t)$
+				- in words
+					- encoder and decoder are "gates to reality" (my words)
+					- predicting the next latent state is disentangled into two components: sequence model and dynamics predictor
+			- loss function $\mathcal L(\phi)\coloneqq \mathbb E_{q_\phi}[\sum_{t=1}^T (\beta_\text{pred}\mathcal L_\text{pred}(\phi)+\beta_\text{dyn}\mathcal L_\text{dyn}(\phi)+\beta_\text{rep}\mathcal L_\text{rep}(\phi))]$
+				- $\beta_\text{pred}=\beta_\text{dyn}=1,\beta_\text{rep}=0.1$
+				- prediction loss trains decoder, reward predictor and cont. predictor
+					- symlog squared loss
+					- $\mathcal L_\text{pred}(\phi)\coloneqq -\ln p_\phi (x_t\mid z_t,h_t)-\ln p_\phi (r_t\mid z_t,h_t)-\ln p_\phi (c_t\mid z_t,h_t)$
+				- dynamics loss trains the sequence model
+					- KL divergence between predictor and next stochastic representation
+				- representation loss trains the representations to become more predictable
+				- wait, so what's the difference between the last two?
+					- $\mathcal L_\text{dyn}(\phi)\coloneqq \max (1, \text{KL}[\text{sg}(q_\phi (z_t\mid h_t,x_t))\mid\mid p_\phi(z_t\mid h_t)])$
+					- $\mathcal L_\text{rep}(\phi)\coloneqq \max (1, \text{KL}[q_\phi (z_t\mid h_t,x_t)\mid\mid \text{sg}(p_\phi(z_t\mid h_t))])$
+					- -> different stop gradients
+					- -> different loss scale (though I don't understand)
+			- details to make things work
+				- usage of free bits (introduced by Kingma et al 2016)
+					- this avoids a degenerate solution where the dynamics are trivial to predict but fail to contain enough information about the inputs
+					- combining free bits with a small representation loss allows for fixed hyperparameters across domains
+				- vector observations are  transformed using symlog function
+					- this prevents large inputs and large reconstruction gradients
+				- to prevent KL loss spikes, categorical distribution of the encoder and dynamics predictor are parameterized as mixture
+					- 1% uniform
+					- 99% neural net output
+					- => guarantees stochasticity and thus well-behaved KL losses
+		- critic
+			- judges the value of each outcome
+			- learns purely from abstract trajectories of representations predicted by the worlds model -> doesn't get to see true observations
+			- approximates a distribution of returns, not just scalar (similar to C51)
+				- in math: $v_\psi (R_t\mid s_t)$, where $s_t\coloneqq \{h_t,z_t\}$
+				- reason: we want to model rewards beyond prediction horizon
+			- predicted value is the expectation of the distribution, $v_t\coloneqq\mathbb E[v_\psi(\cdot\mid s_t)]$
+				- distribution is only used internally by the critic; output is still a value
+			- parameterized as categorical distribution with exponentially spaced bins
+				- reason for categorical distribution: normal distribution doesn't capture possible multiple modes
+				- reason for exponentially spaced bins: distribution can vary by order of magnitude across envs
+			- bootstrapped $\lambda$-returns (introduced by Sutton & Barto)
+				- in math: $R_t^\lambda\coloneqq r_t+\gamma c_t((1-\lambda)v_t+\lambda R_{t+1}^\gamma)$ and $R_T^\lambda\coloneqq v_T$
+				- reason: estimate returns also with rewards beyond prediction horizon
+			- maximum likelihood loss
+				- $\mathcal L(\psi)\coloneqq-\sum_{t=1}^T\ln p_\psi(R_t^\lambda\mid s_t)$
+			- critic regresses targets that depend on its own predictions -> stabilize learning by using a target network, which is an EMA of critic parameters
+			- to improve value prediction in envs where reward prediction is challenging, critic loss is applied to both
+				- imagined trajectories (loss scale $\beta_\text{val}=1$)
+				- replay buffer trajectories (loss scale $\beta_\text{repval}=0.3$)
+			- critic is zero-initialized
+		- actor
+			- chooses action to reach best outcome
+			- uses entropy regularizer
+				- issue: correct scale of the regularizer depends both on the scale and frequency of rewards
+				- fix: normalize return scale to $[0, 1]$, but preserve reward frequency
+					- small returns ($<1$) are not scaled, only larger ones
+					- scaling is done by dividing returns by range $S$
+						- more precisely, by the range from 5th to 95th return percentile, smoothed out using an EMA
+				- => now, we can use use fixed entropy scale $\eta$ across diverse domains
+	- robustness techniques
+		- things that don't work well
+			- squared loss leads to divergence when predicting large targets
+			- absolute loss stagnates learning
+			- Huber loss stagnates learning
+			- normalizing targets based on running statistics (as in PPO) introduces non-stationarity into the optimization
+		- => instead, authors suggest symlog squared error
+			- let
+				- $\text{symlog}(x)\coloneqq\text{sign}(x)\ln (\lvert x\rvert+1)$
+				- $\text{symexp}(x)\coloneqq\text{sign}(x)(\exp (\lvert x\rvert-1))$
+			- neural net $f(x,\theta)$ learns to predict a transformed version of its target $y$
+				- $\mathcal L(\theta)\coloneqq \frac 1 2 (f(x,\theta)-\text{symlog}(y))^2$ -> we're predicting $\text{symlog}(y)$
+			- predictions $\hat y$ are produced by applying inverse transformation
+				- $\hat y\coloneqq\text{symexp} (f(x,\theta))$
+			- reasoning
+				- symlog function compresses the magnitudes of both large positive and negative values
+				- unlike $\log$, it's symmetric around the origin and preserves input sign
+				- approximates $\text{identity}$ around the origin -> doesn't affect learning of targets that are already small enough
+			- for potentially stochastic targets (e.g. rewards or returns), the symexp two-hot loss is introduced
+				- network outputs the logits for a softmax distribution over exponentially spaced bins $b_i\in B$
+				- predictions are read out as the weighted average of the bin positions weighted by their predicted probabilities
+				- -> network can output any continuous value because the weighted average can fall between buckets
+					- $B\coloneqq \text{symexp}([-20\dots +20])$
+					- $\hat y\coloneqq\text{softmax}(f(x))^\top B$
+					- $\mathcal L(\theta)\coloneqq -\text{twohot}(y)^\top \log\text{softmax}(f(x,\theta))$
+			- => Dreamer v3 uses
+				- symlog to transform vector observations, both for encoder inputs and decoder targets
+				- symexp twohot loss for reward predictor and critic
+		- normalization
+		- balancing
+		- transformations
+- results
+	- outperforms specialized methods, with a single configuration
+		- across 150+ diverse tasks: DM Control Suite, Atari, ProcGen, DMLab, Minecraft
+	- first to collect diamonds in Minecraft from scratch without human data or curricula
+	- larger model sizes have two positive outcomes:
+		- achieve higher scores
+		- more sample-efficient (this is surprising! probably due to world model)
+- Q&As of some interesting considerations in this paper
+	- Q: how can the normalized returns be in $[0,1]$ when we just divide by the range $S$? if our range is $[-10,10]$, leading to $S=20$, we'd end up with normalized range $[-0.5,0.5]$
+		- A: that's correct but the section about actor learning mentions: "In practice, subtracting an offset from the returns does not change the actor gradient and thus dividing by the range S is sufficient" -> so, we could perform an additional step of shifting the normalized range (by subtracting min of normalized range), but the end result would be the same so we can skip that step
+	- Q: why use return normalization with a denominator limit?
+		- A: other methods can't deal with both sparse and dense rewards
+			- normalizing advantages instead of returns (as done in PPO)
+				- problem: puts fixed amount of emphasis on maximizing returns over entropy, regardless of rewards being in reach -> scaling up advantages when rewards are sparse can amplify noise that outweighs the entropy regularizer -> less exploration
+			- normalizing rewards or returns by standard deviation
+				- problem: fails with sparse rewards where $\text{std}\approx 0$ -> rewards are amplified regardless of their size
+			- constrained optimization
+				- problem: while this targets a fixed entropy, regardless of achievable returns (-> robust), it explores slowly under sparse rewards and converges lower under dense rewards
+	- Q: why are critic and reward predictor initialization to zeros?
+		- A: random initialization leads to large predicted rewards, hindering learning
+	- Q: how come all the world model components have the same parameters $\phi$?
+		- A: the individual components are all individual MDPs (except encoder and decoder being CNN in the case of image inputs), but their parameters are subsumed in $\phi$, since they are jointly (i.e. not just concurrently, but truly together, with one optimizer)
+
+🗓️ 2024
+
+✍️
+- [[Danijar Hafner]]
+- [[Jurgis Pasukonis]]
+- [[Jimmy Ba]]
+- [[Timothy Lillicrap]]
