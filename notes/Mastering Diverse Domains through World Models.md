@@ -23,6 +23,7 @@
 				- dynamics predictor: $\hat z_t\sim p_\phi(\hat z_t\mid h_t)$
 				- reward predictor: $\hat r_t\sim p_\phi(\hat r_t\mid h_t,z_t)$, zero-initialized
 				- continuation flag predictor: $\hat c_t\sim p_\phi(\hat c_t\mid h_t,z_t)$
+					- takes the place of the discount predictor $\hat\gamma_t$ from Dreamer v2
 				- decoder: $\hat x_t\sim p_\phi(\hat x_t\mid h_t,z_t)$
 				- in words
 					- encoder and decoder are "gates to reality" (my words)
