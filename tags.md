@@ -26,6 +26,7 @@
 - #LSTM Long Short-Term Memory
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
+- #MTAN Multi-Task Attention Network
 - #MTL Multi-Task Learning
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
