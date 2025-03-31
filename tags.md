@@ -1,4 +1,5 @@
 # Glossary
+- #AEVB Auto-Encoding Variational Bayes (algorithm)
 - #ALE Arcade Learning Environment (benchmark)
 - #AGC Adaptive Gradient Clipping (optimizer)
 - #API Approximate Policy-Iteration
@@ -24,8 +25,10 @@
 - #LASSO Least Absolute Shrinkage and Selection Operator (l1 norm)
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
+- #MAP Maximum A Posteriori (estimator)
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
+- #MLE Maximum Likelihood Estimator
 - #MTAN Multi-Task Attention Network
 - #MTL Multi-Task Learning
 - #MTRL Multi-Task Reinforcement Learning
@@ -42,6 +45,7 @@
 - #SF Score Function (estimator)
 - #SMBO Sequential Model-Based global Optimization (algorithm)
 - #SMDP Semi-Markov Decision Process
+- #SGVB Stochastic Gradient Variational Bayes
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
@@ -51,6 +55,7 @@
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
 - #TPE Tree-structured Parzen Estimator
+- #VB Variational Bayes
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
 # Tag Counts

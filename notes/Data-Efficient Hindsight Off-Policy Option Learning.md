@@ -1,4 +1,4 @@
-#RL #ML-estimation #option-learning #HO2
+#RL #MLE #option-learning #HO2
 
 ![[Pasted image 20250315233611.png]]
 - background: option learning
