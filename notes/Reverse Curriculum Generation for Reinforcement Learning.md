@@ -1,4 +1,4 @@
-#RL #curriculum-learning #reverse-learning #VI #PI #TRPO
+#RL #curriculum-learning #reverse-learning #VI #PI #TRPO #Brownian-motion
 
 - motivation
 	- RL often faces needle-in-haystack problem, e.g. learning to turn a key in a lock
@@ -17,6 +17,8 @@
 		- this reverse expansion is inspired by RL classics like VI or PI
 		- no reward engineering
 	- how are those start-states chosen?
+		- new states are sampled by applying noise in the action space, using short "Brownian motion" rollouts, taking actions $a_{t+1}=\epsilon_t$ with $\epsilon_t\sim\mathcal N(0,\Sigma)$
+			- such states are guaranteed to be feasible; env takes care of that
 		- "good" start states for next iteration are those with $R_\text{min}\leq R(\pi_{i-1,s_0})\leq R_\text{max}$
 			- hyperparameters $R_\text{min},R_\text{max}$ can be tuned in accordance with the interpretation as bounds on the probability of success
 		- once some start states are mastered ($R(\pi_{i+1},s_0)>R_\text{max})$, $s_0$ is no longer in $S_{i+1}^0$

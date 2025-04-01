@@ -34,6 +34,7 @@
 - #MTRL Multi-Task Reinforcement Learning
 - #MoE Mixture of Experts
 - #PER Prioritized Experience Replay (type of replay buffer)
+- #PI Policy Iteration
 - #POMDP Partially Observable Markov Decision Process
 - #ReLU Rectified Linear Unit
 - #RL Reinforcement Learning
@@ -52,10 +53,12 @@
 - #STARS Share-unique features and task-aware Prioritized Sampling (algorithm)
 - #STS-unit Stochastic Times Smooth unit
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
+- #TD Temporal Difference (learning method)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
 - #TPE Tree-structured Parzen Estimator
 - #VB Variational Bayes
+- #VI Value Iteration
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 
 # Tag Counts
