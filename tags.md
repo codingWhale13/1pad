@@ -56,6 +56,7 @@
 - #TD Temporal Difference (learning method)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
+- #TTD Truncated Temporal Differences (algorithm)
 - #TPE Tree-structured Parzen Estimator
 - #VB Variational Bayes
 - #VI Value Iteration
