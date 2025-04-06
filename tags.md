@@ -18,6 +18,7 @@
 - #EI Expected Improvement (optimization criterion)
 - #EMA Exponential Moving Average (filter, can be used as target)
 - #FQI Fitted Q-Iteration (algorithm)
+- #GAE Generalized Advantage Estimator
 - #GP Gaussian Process
 - #HL Histogram Loss
 - #HO2 Hindsight Off-policy Options
