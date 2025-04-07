@@ -11,6 +11,7 @@
 - #CNN Convolutional Neural Network
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
 - #DBN Deep Belief Network
+- #DPG Deterministic Policy Gradient (algorithm)
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
 - #DMC-suite DeepMind Control Suite (benchmark)
