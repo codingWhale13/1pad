@@ -23,6 +23,7 @@
 - #GP Gaussian Process
 - #HL Histogram Loss
 - #HO2 Hindsight Off-policy Options
+- #IS Importance Sampling
 - #KL-divergence Kullback–Leibler divergence
 - #LASSO Least Absolute Shrinkage and Selection Operator (l1 norm)
 - #LLM Large-Language Model
