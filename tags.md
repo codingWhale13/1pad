@@ -49,6 +49,7 @@
 - #SF Score Function (estimator)
 - #SMBO Sequential Model-Based global Optimization (algorithm)
 - #SMDP Semi-Markov Decision Process
+- #SGD Stochastic Gradient Descent (algorithm)
 - #SGVB Stochastic Gradient Variational Bayes
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
