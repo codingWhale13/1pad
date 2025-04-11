@@ -1,4 +1,4 @@
-#RL #actor-critic #scaling-up 
+#RL #actor-critic #scaling-up #resnet #layer-norm
 
 ![[Pasted image 20250411235908.png]]
 - motivation
