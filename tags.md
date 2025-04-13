@@ -32,6 +32,7 @@
 - #MAP Maximum A Posteriori (estimator)
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
+- #MC Monte Carlo
 - #MLE Maximum Likelihood Estimator
 - #MTAN Multi-Task Attention Network
 - #MTL Multi-Task Learning
@@ -61,6 +62,7 @@
 - #TD Temporal Difference (learning method)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
 - #TD3 Twin Delayed Deep Deterministic policy gradient (algorithm)
+- #TRPO Trust Region Policy Optimization
 - #TTD Truncated Temporal Differences (algorithm)
 - #TPE Tree-structured Parzen Estimator
 - #VB Variational Bayes
