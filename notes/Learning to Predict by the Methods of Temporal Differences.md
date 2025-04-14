@@ -49,4 +49,4 @@
 🗓️ 1988
 
 ✍️
-- [[Richard Sutton]]
+- [[Richard S. Sutton]]
