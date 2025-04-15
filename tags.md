@@ -1,4 +1,5 @@
 # Glossary
+- #ADP Approximate Dynamics Programming
 - #AEVB Auto-Encoding Variational Bayes (algorithm)
 - #ALE Arcade Learning Environment (benchmark)
 - #AGC Adaptive Gradient Clipping (optimizer)
@@ -8,6 +9,7 @@
 - #BC-MDP Block Contextual Markov Decision Process
 - #BRO Bigger, Regularized, Optimistic (algorithm)
 - #C51 Categorical 51-atom (algorithm)
+- #CPI Classification-based Policy Iteration
 - #CReLU Concatenated Rectified Linear Unit
 - #CNN Convolutional Neural Network
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
