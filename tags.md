@@ -70,6 +70,7 @@
 - #VB Variational Bayes
 - #VI Value Iteration
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
+- #VQA Visual Question Answering
 
 # Tag Counts
 
