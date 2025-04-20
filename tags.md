@@ -1,4 +1,5 @@
 # Glossary
+- #A3C Asynchronous Advantage Actor Critic
 - #ADP Approximate Dynamics Programming
 - #AEVB Auto-Encoding Variational Bayes (algorithm)
 - #ALE Arcade Learning Environment (benchmark)
@@ -9,6 +10,7 @@
 - #BC-MDP Block Contextual Markov Decision Process
 - #BRO Bigger, Regularized, Optimistic (algorithm)
 - #C51 Categorical 51-atom (algorithm)
+- #CIFAR Canadian Institute for Advanced Research (image dataset)
 - #CPI Classification-based Policy Iteration
 - #CReLU Concatenated Rectified Linear Unit
 - #CNN Convolutional Neural Network
@@ -60,6 +62,7 @@
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
 - #STARS Share-unique features and task-aware Prioritized Sampling (algorithm)
 - #STS-unit Stochastic Times Smooth unit
+- #SVHN Street View House Numbers (dataset)
 - #TCRL Temporal Consistency Reinforcement Learning (algorithm)
 - #TD Temporal Difference (learning method)
 - #TD-MPC Temporal Difference Learning for Model Predictive Control (algorithm)
