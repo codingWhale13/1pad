@@ -30,6 +30,7 @@
 - #HO2 Hindsight Off-policy Options
 - #IS Importance Sampling
 - #KL-divergence Kullback–Leibler divergence
+- #KNN K-Nearest Neighbor
 - #LASSO Least Absolute Shrinkage and Selection Operator (l1 norm)
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
