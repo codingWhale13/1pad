@@ -53,6 +53,7 @@
 - #SAC Soft Actor-Critic
 - #SAL Shared domain-Agnostic Latent space (algorithm)
 - #SC-MDP Stiefel Contextual Markov Decision Process
+- #SEM Simplicial Embedding
 - #SF Score Function (estimator)
 - #SMBO Sequential Model-Based global Optimization (algorithm)
 - #SMDP Semi-Markov Decision Process
@@ -61,6 +62,7 @@
 - #SPR Self-Predictive Representations (algorithm)
 - #SR-SAC Scaled-by-Resetting Soft Actor Critic (algorithm)
 - #SR-SPR Scaled-by-Resetting Self-Predictive Representation (algorithm)
+- #SSL Self-Supervised Learning
 - #STARS Share-unique features and task-aware Prioritized Sampling (algorithm)
 - #STS-unit Stochastic Times Smooth unit
 - #SVHN Street View House Numbers (dataset)
