@@ -15,6 +15,7 @@
 - #CReLU Concatenated Rectified Linear Unit
 - #CNN Convolutional Neural Network
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
+- #CQL Conservative Q-Learning
 - #DBN Deep Belief Network
 - #DPG Deterministic Policy Gradient (algorithm)
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
@@ -47,6 +48,7 @@
 - #PI Policy Iteration
 - #POMDP Partially Observable Markov Decision Process
 - #ReLU Rectified Linear Unit
+- #ResNet Residual Neural Network
 - #RL Reinforcement Learning
 - #RSSM Recurrent State Space Model
 - #S-ALE Switching Arcade Learning Environment (experiment setup)
