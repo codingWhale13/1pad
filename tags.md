@@ -4,6 +4,7 @@
 - #AEVB Auto-Encoding Variational Bayes (algorithm)
 - #ALE Arcade Learning Environment (benchmark)
 - #AGC Adaptive Gradient Clipping (optimizer)
+- #ASPP Atrous Spatial Pyramid Pooling
 - #API Approximate Policy-Iteration
 - #AVI Approximate Value-Iteration
 - #BBF Bigger, Better, Faster (algorithm)
@@ -17,6 +18,7 @@
 - #CTPG Cross-Task Policy Guidance (MTRL framework)
 - #CQL Conservative Q-Learning
 - #DBN Deep Belief Network
+- #DP Dynamic Progamming
 - #DPG Deterministic Policy Gradient (algorithm)
 - #DDPG Deep Deterministic Policy Gradient (algorithm)
 - #DL Deep Learning
@@ -40,6 +42,7 @@
 - #MBRL Model-Based Reinforcement Learning
 - #MC Monte Carlo
 - #MLE Maximum Likelihood Estimator
+- #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MTAN Multi-Task Attention Network
 - #MTL Multi-Task Learning
 - #MTRL Multi-Task Reinforcement Learning
