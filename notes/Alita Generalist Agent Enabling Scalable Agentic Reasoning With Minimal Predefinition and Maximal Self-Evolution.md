@@ -10,21 +10,21 @@
 🗓️ 2025
 
 ✍️
-- Jiahao Qiu
-- Xuan Qi
-- Tongcheng Zhang
-- Xinzhe Juan
-- Jiacheng Guo
-- Yifu Lu
-- Yimin Wang
-- Zixin Yao
-- Qihan Ren
-- Xun Jiang
-- Xing Zhou
-- Dongrui Liu
-- Ling Yang
-- Yue Wu
-- Kaixuan Huang
-- Shilong Liu
-- Hongru Wang
-- Mengdi Wang
+- [Jiahao Qiu]
+- [Xuan Qi]
+- [Tongcheng Zhang]
+- [Xinzhe Juan]
+- [Jiacheng Guo]
+- [Yifu Lu]
+- [Yimin Wang]
+- [Zixin Yao]
+- [Qihan Ren]
+- [Xun Jiang]
+- [Xing Zhou]
+- [Dongrui Liu]
+- [Ling Yang]
+- [Yue Wu]
+- [Kaixuan Huang]
+- [Shilong Liu]
+- [Hongru Wang]
+- [Mengdi Wang]
