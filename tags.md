@@ -41,6 +41,7 @@
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MBRL Model-Based Reinforcement Learning
 - #MC Monte Carlo
+- #MCP Model Context Protocol
 - #MLE Maximum Likelihood Estimator
 - #MNIST Modified National Institute of Standards and Technology (dataset)
 - #MTAN Multi-Task Attention Network
