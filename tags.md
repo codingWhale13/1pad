@@ -54,6 +54,7 @@
 - #ReLU Rectified Linear Unit
 - #ResNet Residual Neural Network
 - #RL Reinforcement Learning
+- #RNN Recurrent Neural Network
 - #RSSM Recurrent State Space Model
 - #S-ALE Switching Arcade Learning Environment (experiment setup)
 - #SAC Soft Actor-Critic
