@@ -1,4 +1,4 @@
-#RL #safe-RL #logic-reasoning #neurosymbolic-RL #minihack
+#RL #safe-RL #logic-reasoning #neurosymbolic-RL #probabilistic-logic-shields #minihack
 
 ![[Pasted image 20250619100824.png]]
 - motivation

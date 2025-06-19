@@ -50,6 +50,7 @@
 - #MoE Mixture of Experts
 - #PER Prioritized Experience Replay (type of replay buffer)
 - #PI Policy Iteration
+- #PLPG Probabilistic Logic Policy Gradient
 - #POMDP Partially Observable Markov Decision Process
 - #ReLU Rectified Linear Unit
 - #ResNet Residual Neural Network
