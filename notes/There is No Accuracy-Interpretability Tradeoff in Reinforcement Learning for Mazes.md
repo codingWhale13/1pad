@@ -1,4 +1,4 @@
-#RL #interpretability #decision-tree 
+#RL #interpretability #decision-tree
 
 - motivation
 	- we want interpretability in RL, but we also want good performance - what is the price of interpretability?
