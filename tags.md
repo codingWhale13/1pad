@@ -60,6 +60,7 @@
 - #S-ALE Switching Arcade Learning Environment (experiment setup)
 - #SAC Soft Actor-Critic
 - #SAL Shared domain-Agnostic Latent space (algorithm)
+- #SDPA Scaled Dot-Product Attention
 - #SC-MDP Stiefel Contextual Markov Decision Process
 - #SEM Simplicial Embedding
 - #SF Score Function (estimator)
