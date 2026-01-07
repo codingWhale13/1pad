@@ -37,6 +37,7 @@
 - #KL-divergence Kullback–Leibler divergence
 - #KNN K-Nearest Neighbor
 - #LASSO Least Absolute Shrinkage and Selection Operator (l1 norm)
+- #LGPL Language-Guided Preference Learning
 - #LLM Large-Language Model
 - #LSTM Long Short-Term Memory
 - #MAP Maximum A Posteriori (estimator)
