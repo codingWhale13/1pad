@@ -29,6 +29,8 @@
 - #FQI Fitted Q-Iteration (algorithm)
 - #GAE Generalized Advantage Estimator
 - #GP Gaussian Process
+- #HIRL Human Intervention Reinforcement Learning
+- #HITL Human-In-The-Loop
 - #HL Histogram Loss
 - #HO2 Hindsight Off-policy Options
 - #IS Importance Sampling
