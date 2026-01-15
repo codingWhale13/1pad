@@ -89,6 +89,7 @@
 - #TPE Tree-structured Parzen Estimator
 - #VB Variational Bayes
 - #VI Value Iteration
+- #VLM Vision-Language Model
 - #VQ-VAE Vector Quantized-Variational AutoEncoder
 - #VQA Visual Question Answering
 
