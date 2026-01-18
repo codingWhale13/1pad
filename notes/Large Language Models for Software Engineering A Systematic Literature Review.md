@@ -1,0 +1,74 @@
+#LLM #code-generation #software-engineering
+
+Application areas of LLM4SE:
+- requirements engineering
+    - anaphoric ambiguity treatment
+    - requirements classification
+    - requirements term identification
+    - co-reference detection
+    - traceability automation
+- software design
+    - GUI retrieval
+    - rapid prototyping
+    - software specification synthesis
+- software development
+    - code generation
+    - code completion
+    - code summarisation
+    - code understanding
+    - code search
+    - program synthesis
+    - API recommendation
+    - API synthesis
+    - code comment generation
+    - code representation
+    - method name generation
+    - agile story point estimation
+    - API documentation smell detection
+    - API entity and relation extraction
+    - code optimization
+    - code example recommendation
+    - control flow graph generation
+    - identifier normalization
+    - type inference
+- software quality assurance
+    - test generation
+    - vulnerability detection
+    - test automation
+    - verification
+    - bug localization
+    - failure-inducing test identification
+    - flaky test prediction
+- software maintenance
+    - program repair
+    - code review
+    - debugging
+    - bug report analysis
+    - code clone detection
+    - logging
+    - bug prediction
+    - bug triage
+    - bug report replay
+    - duplicate bug report detection
+    - decompilation
+    - program merge conflicts repair
+    - sentiment analysis
+    - tag recommendation
+    - vulnerability repair
+    - traceability recovery
+- software management
+    - effort estimation
+
+🗓️ 2023
+
+✍️
+- [[Xinyi Hou]]
+- [[Yanjie Zhao]]
+- [[Yue Liu]]
+- [[Zhou Yang]]
+- [[Kailong Wang]]
+- [[Li Li]]
+- [[Xiapu Luo]]
+- [[David Lo]]
+- [[John Grundy]]
+- [[Haoyu Wang]]
