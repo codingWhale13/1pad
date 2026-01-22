@@ -56,6 +56,7 @@
 - #PI Policy Iteration
 - #PLPG Probabilistic Logic Policy Gradient
 - #POMDP Partially Observable Markov Decision Process
+- #PBRS Potential-Based Reward Shaping
 - #ReLU Rectified Linear Unit
 - #ResNet Residual Neural Network
 - #RL Reinforcement Learning
